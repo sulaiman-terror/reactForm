@@ -1,4 +1,4 @@
-// nav-context.js
+
 import { createContext, useState } from 'react';
 
 const NavContext = createContext();

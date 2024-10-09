@@ -6,7 +6,7 @@ const Logo = () => {
             <>
                 <img className='h-14 w-14' src={book} alt="logo" />
                 <span className='text-3xl text-green-800 mr-1'>
-                    Open Library
+                    Open Libary
                 </span>
             </>
     );

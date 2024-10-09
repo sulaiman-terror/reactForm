@@ -7,9 +7,6 @@ import { NavLink } from 'react-router-dom';
 const Nav = () => {
     const {navLinks, SetNavLinks} = useContext(NavContext);
 
-    const handleAddLink = () =>{
-        SetNavLinks((prevLinks)=>[...prevLinks, {label:'NewLink', path:'NewLink'}])
-    }
 
     return (
         <nav className='md:flex bg-white py-4 md:px-10 px-7'>
@@ -17,15 +14,13 @@ const Nav = () => {
              <Logo/>
              <ul>
                 {navLinks.map((link, index)=>(
-                    <li key={index}>
-                        <NavLink to={link.path}
-                            activeClassName = "active">
+                    <li  className='inline-block xl:mx-4 lg:mx-3 sm:mx-2' key={index}>
+                        <NavLink to={link.path}>
                             {link.label}
                         </NavLink>
                     </li>
                     ))}
              </ul>
-             <button onClick={handleAddLink}>add New Link</button>
             </div>
         </nav>
     );

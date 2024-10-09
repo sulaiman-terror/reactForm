@@ -1,12 +1,20 @@
 import './App.css'
 import Header from './components/Header';
+import { BrowserRouter } from 'react-router-dom';
+import { NavProvider } from './components/Nav-context';
+import AppRoutes from './components/App-routes';
 
 
 const App = () => {
   return (
     <>
-      <Header />
-      <div className='bg-gray-300 w-full h-screen'></div>
+      <BrowserRouter>
+        <NavProvider>
+          <Header />
+          <AppRoutes/>
+        </NavProvider>
+      </BrowserRouter>
+
     </>
   );
 };
