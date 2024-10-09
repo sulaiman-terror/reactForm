@@ -1,0 +1,10 @@
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul a.active {
+  color: rgb(34 197 94);
+ }
